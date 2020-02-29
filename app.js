@@ -119,15 +119,15 @@ function viewEmployeesPromise() {
   });
 }
 
-// View all employees and details
-function viewEmployees(cb) {
-  let query =
-    "SELECT  first_name, last_name, title, salary, name FROM employee JOIN role ON employee.role_id = role.id Join department On role.department_id = department.id ";
-  connection.query(query, function(err, data) {
-    console.table(data);
-    start();
-  });
-}
+// // View all employees and details
+// function viewEmployees(cb) {
+//   let query =
+//     "SELECT  first_name, last_name, title, salary, name FROM employee JOIN role ON employee.role_id = role.id Join department On role.department_id = department.id ";
+//   connection.query(query, function(err, data) {
+//     console.table(data);
+//     start();
+//   });
+// }
 
 // Function to view all employees by the department they work in
 function employeeByDept() {
